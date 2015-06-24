@@ -1,6 +1,15 @@
+var request = require('request');
 function Waker(config) {
-    var request = require('request');
-    setInterval(function () {
+    this.intervalHandle = null;
+    this.config = config;
+}
+Waker.prototype.start = function () {
+    var config = this.config;
+    var self = this;
+    this.intervalHandle = setInterval(function () {
+        if (self.onInterval) {
+            self.onInterval();
+        }
         config.hostnames.map(function (a) {
             request.get(
                 'http://' + a,
@@ -17,4 +26,8 @@ function Waker(config) {
     }, config.interval)
 
 }
+Waker.prototype.stop = function () {
+    clearInterval(this.intervalHandle);
+}
 module.exports = Waker;
+
