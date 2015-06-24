@@ -17,4 +17,4 @@ function Waker(config) {
     }, config.interval)
 
 }
-exports.Waker = Waker;
+module.exports = Waker;
