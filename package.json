@@ -1,7 +1,7 @@
 {
   "name": "app-waker",
   "version": "0.0.1",
-  "description": "",
+  "description": "ERROR: No README data found!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,12 +11,13 @@
     "url": "https://github.com/mint-lemon-eucalyptus/app-waker.git"
   },
   "author": "mint-lemon-eucalyptus",
-    "dependencies": {
-        "request": "*"
-    },
-    "license": "ISC",
+  "dependencies": {
+    "request": "*"
+  },
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/mint-lemon-eucalyptus/app-waker/issues"
   },
-  "homepage": "https://github.com/mint-lemon-eucalyptus/app-waker"
+  "homepage": "https://github.com/mint-lemon-eucalyptus/app-waker",
+  "devDependencies": {}
 }
